@@ -1,0 +1,41 @@
+{
+  "name": "shortstuff",
+  "version": "0.0.1",
+  "description": "React shortcode component",
+  "source": "src/index.js",
+  "modules": "dist/shortstuff.es.js",
+  "main": "dist/shortstuff.js",
+  "umd:main": "dist/shortstuff.umd.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "microbundle --jsx React.createElement",
+    "dev": "build watch"
+  },
+  "author": "Dave Garwacke <dave.garwacke@ifyoumakeit.com",
+  "devDependencies": {
+    "babel-jest": "^22.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.4",
+    "microbundle": "^0.3.1"
+  },
+  "peerDependencies": {
+    "preact": "*",
+    "react": "*"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ],
+    "plugins": ["transform-react-jsx", "transform-object-rest-spread"]
+  }
+}
